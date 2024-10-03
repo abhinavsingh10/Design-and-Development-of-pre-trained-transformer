@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Text Generator</h1>
+        <form id="generateForm">
+            <label for="prompt">Start Prompt:</label>
+            <input type="text" id="prompt" name="prompt" required>
+            <label for="max_tokens">Max Tokens:</label>
+            <input type="number" id="max_tokens" name="max_tokens" value="100">
+            <label for="temperature">Temperature:
+                <i id="slider_op"></i>
+            </label>
+            <input type="range" id="temperature" name="temperature" min="0.1" max="1.0" step="0.1" value="0.5">
+            <button type="submit">Generate</button>
+        </form>
+        <div id="result">
+            <h2>Generated Text:</h2>
+            <p id="generatedText"></p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
